@@ -3,7 +3,7 @@ import os
 
 client = discord.Client()
 
-trigger_words = ["you", "getting", "tonight", "hunt", "playing", "zoomer"]
+trigger_words = ["you", "getting", "tonight", "hunt", "playing", "zoomer" "yo", "guys", "around"]
 
 @client.event
 async def on_ready():
@@ -17,10 +17,10 @@ async def on_message(message):
   msg = message.content
 
   if any(word in msg for word in trigger_words):
-      await message.channel.send('Perhaps boomer')
+      await message.channel.send('What would you know of struggle, Perfect Son?')
 
-  if 'liberal' in message.content:
-    await message.channel.send('Go fuck yourself boomer')
+  if 'where' in message.content:
+    await message.channel.send('Dont worry about what im doing everytime im doing it.')
   
 
 client.run(os.getenv('TOKEN'))

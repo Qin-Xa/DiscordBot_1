@@ -3,6 +3,8 @@ import os
 
 client = discord.Client()
 
+trigger_words = ["you", "getting", "tonight", "hunt", "playing", "zoomer"]
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -11,8 +13,13 @@ async def on_ready():
 async def on_message(message):
   if message.author == client.user:
     return
-    
-  if 'you' in message.content:
+
+  msg = message.content
+
+  if any(word in msg for word in trigger_words):
+      await message.channel.send('Perhaps boomer')
+
+  if 'liberal' in message.content:
     await message.channel.send('Go fuck yourself boomer')
   
 

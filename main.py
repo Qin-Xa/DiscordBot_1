@@ -21,6 +21,9 @@ async def on_message(message):
 
   if 'where' in message.content:
     await message.channel.send('Dont worry about what im doing everytime im doing it.')
+
+  if 'eating' in message.content:
+    await message.channel.send('Eating these nuts.')
   
 
 client.run(os.getenv('TOKEN'))

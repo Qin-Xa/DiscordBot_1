@@ -13,7 +13,7 @@ async def on_message(message):
     return
     
   if 'you' in message.content:
-    await message.channel.send('Go fuck yourself boomer')
+    await message.channel.send('hello boomer')
   
 
 client.run(os.getenv('TOKEN'))
